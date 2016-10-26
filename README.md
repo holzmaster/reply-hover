@@ -2,9 +2,13 @@
 Antwort-Kommentar via Hover.
 
 Aus
+
 ![Vorschau 0](https://holzmaster.github.io/reply-hover/preview-0.png)
+
 wird beim Hovern über den Pfeil
+
 ![Vorschau 0](https://holzmaster.github.io/reply-hover/preview-1.png)
+
 Beim Klick auf den Pfeil landet man bei dem Kommentar.
 
 ## Installation
