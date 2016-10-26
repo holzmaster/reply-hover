@@ -4,9 +4,11 @@
 // @namespace	holzmaster
 // @include		http://pr0gramm.com/*
 // @include		https://pr0gramm.com/*
-// @version		1.0.0
+// @version		1.0.1
 // @description	Zeigt und verlinkt den Post, auf den geantwortet wurde.
 // @copyright	2016+, holzmaster
+// @updateURL	https://holzmaster.github.io/reply-hover/reply-hover.user.js
+// @downloadURL	https://holzmaster.github.io/reply-hover/reply-hover.user.js
 // @icon		http://pr0gramm.com/media/pr0gramm-favicon.png
 // @grant		none
 // ==/UserScript==
