@@ -4,7 +4,7 @@
 // @namespace	holzmaster
 // @include		http://pr0gramm.com/*
 // @include		https://pr0gramm.com/*
-// @version		1.0.2
+// @version		1.1.0
 // @description	Zeigt und verlinkt den Post, auf den geantwortet wurde.
 // @copyright	2016+, holzmaster
 // @updateURL	https://holzmaster.github.io/reply-hover/reply-hover.user.js
@@ -13,19 +13,21 @@
 // @grant		none
 // ==/UserScript==
 
-function addGlobalStyle(css) {
-	const style = document.createElement("style");
-	style.type = "text/css";
-	style.innerHTML = css;
-	document.head.appendChild(style);
-}
-
 (function() {
-	$(function() {
+	const s = document.createElement('script');
+	s.appendChild(document.createTextNode('(' + uneval(main) + ')();'));
+	(document.body || document.head || document.documentElement).appendChild(s);
+
+	function main() {
 		"use strict";
+		function addGlobalStyle(css) {
+			const style = document.createElement("style");
+			style.type = "text/css";
+			style.innerHTML = css;
+			document.head.appendChild(style);
+		}
 
 		const cssRule = ".reply-action-icon { transform: rotate(90deg); display: inline-block; } .post-preview { display: none; z-index: 10; background-color: #161618; padding: 10px; border: 1px solid #252525; color: #f2f5f4; font-size: 14px; box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.85); } .post-preview .preview-user { margin: 0 0 0 2px; color: #F5F7F6; } .reply-hover:hover + .post-preview { display: block; position: absolute; bottom: 2em; left: 0; } .reply-hover { color: var(--theme-main-color); }";
-
 
 		const prefixHover = '<?js if (c.children.length > 0) {?> <span class="fold fold-in action"';
 
@@ -52,5 +54,5 @@ function addGlobalStyle(css) {
 			.replace(prefixHover, previewElement); /* Add the hover element + preview */
 
 		addGlobalStyle(cssRule);
-	});
+	}
 })();
